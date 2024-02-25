@@ -1,0 +1,55 @@
+﻿namespace FirstExam;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack<int> money = new Stack<int>(Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+        Queue<int> prices = new Queue<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+        int countFood = 0;
+        while (money.Count>0&&prices.Count>0)
+        {
+            if (prices.Peek()>money.Peek())
+            {
+                prices.Dequeue();
+                money.Peek();
+            }
+            else if (prices.Peek() == money.Peek())
+            {
+                prices.Dequeue();
+                money.Pop();
+                countFood++;
+            }
+            else
+            { int change = money.Peek() - prices.Peek();
+                money.Push(money.Pop()+change);
+                prices.Dequeue();
+                countFood++;
+            }
+        }
+        if (countFood>0)
+        {
+            if (countFood<4)
+            {
+                if (countFood ==1)
+                {
+                    Console.WriteLine($"Henry ate: {countFood} food.");
+                }
+                else
+                {
+                    Console.WriteLine($"Henry ate: {countFood} foods.");
+                }
+                
+            }
+            else
+            {
+                Console.WriteLine($"Gluttony of the day! Henry ate {countFood} foods.");
+                Console.WriteLine();
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Henry remained hungry. He will try next weekend again.");
+        }
+    }
+}
+
