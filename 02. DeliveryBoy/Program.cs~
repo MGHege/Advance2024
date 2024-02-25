@@ -1,0 +1,244 @@
+﻿namespace _02._DeliveryBoy;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] integers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+        char[,] matrix = new char[integers[0], integers[1]];
+        int currentRow = 0;
+        int currentCol = 0;
+        int startRow = 0;
+        int startCow = 0;
+        for (int row = 0; row < matrix.GetLength(0); row++)
+        {
+            char[] data = Console.ReadLine().ToArray();
+            for (int col = 0; col < matrix.GetLength(1); col++)
+            {
+                matrix[row, col] = data[col];
+                if (matrix[row, col] == 'B')
+                {
+                    currentRow = row;
+                    currentCol = col;
+                   startRow = row;
+                   startCow = col;
+                    break;
+                }
+            }
+        }
+        bool takeTheOrder = false;
+
+        while (matrix[currentRow, currentCol] > matrix[integers[0], integers[1]] || matrix[currentRow, currentCol] < matrix[integers[0], integers[1]])
+        {
+            matrix[currentRow, currentCol] = '.';
+            string input = Console.ReadLine();
+            if (input=="up")
+            {
+                if (matrix[currentRow--,currentCol]=='*')
+                {
+
+                }
+                else
+                {currentRow--;
+                if (currentRow<0)
+                {
+                        matrix[startRow, startCow] = ' ';
+                        Console.WriteLine($"The delivery is late. Order is canceled.");
+                        break;
+                    }
+
+                }
+                
+
+            }
+            else if (input=="down")
+            {
+                if (matrix[currentRow++, currentCol] == '*')
+                {
+
+                }
+                else
+                {currentRow++;
+                if (currentRow > integers[0]-1)
+                {
+                        matrix[startRow, startCow] = ' ';
+                        Console.WriteLine($"The delivery is late. Order is canceled.");
+                        break;
+                    }
+
+                }
+            }
+            else if (input=="left")
+            {
+                if (matrix[currentRow, currentCol--] == '*')
+                {
+
+                }
+                else
+                {currentCol--;
+                if (currentCol < 0)
+                {
+                    matrix[startRow, startCow] = ' ';
+                        Console.WriteLine($"The delivery is late. Order is canceled.");
+                    break;
+                }
+                
+                }
+                
+            }
+            else //right
+            {
+                if (matrix[currentRow, currentCol++] == '*')
+                {
+
+                }
+                else
+                {
+                    currentCol++;
+                    if (currentRow > integers[1] - 1)
+                    {
+                        matrix[startRow, startCow] = ' ';
+                        Console.WriteLine($"The delivery is late. Order is canceled.");
+                        break;
+                    }
+                }
+                
+            }
+            if (matrix[currentRow,currentCol]=='P')
+            {
+                matrix[currentRow, currentCol] = 'R';
+                takeTheOrder = true;
+                Console.WriteLine($"Pizza is collected. 10 minutes for delivery.");
+            }
+            if (matrix[currentRow, currentCol] == 'A'&& takeTheOrder!=false)
+            {
+                matrix[currentRow, currentCol] = 'P';
+                Console.WriteLine($"Pizza is delivered on time! Next order...");
+            }
+        }
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int e = 0; e < matrix.GetLength(1); e++)
+            {
+                Console.Write(matrix[i,e]);
+            }
+            Console.WriteLine();
+        }
+
+    }
+
+}
+//using System;
+/*
+5 6
+*----A
+* B***-
+*-***-
+*----P
+******
+down
+down
+right
+right
+right
+right
+up
+up
+up
+*/
+//class PizzaDeliverySimulation
+//{
+//    static void PrintMatrix(char[,] matrix, int rows, int cols)
+//    {
+//        for (int i = 0; i < rows; i++)
+//        {
+//            for (int j = 0; j < cols; j++)
+//            {
+//                Console.Write(matrix[i, j]);
+//            }
+//            Console.WriteLine();
+//        }
+//    }
+
+//    static void Main()
+//    {
+//        string[] input = Console.ReadLine().Split();
+//        int rows = int.Parse(input[0]);
+//        int cols = int.Parse(input[1]);
+
+//        char[,] matrix = new char[rows, cols];
+
+//        int boyRow = -1, boyCol = -1;
+
+//        for (int i = 0; i < rows; i++)
+//        {
+//            string row = Console.ReadLine();
+//            for (int j = 0; j < cols; j++)
+//            {
+//                matrix[i, j] = row[j];
+//                if (row[j] == 'B')
+//                {
+//                    boyRow = i;
+//                    boyCol = j;
+//                }
+//            }
+//        }
+
+//        string[] commands = Console.ReadLine().Split();
+
+//        bool pizzaCollected = false;
+//        bool deliverySuccessful = false;
+
+//        foreach (var command in commands)
+//        {
+//            int newRow = boyRow, newCol = boyCol;
+
+//            switch (command)
+//            {
+//                case "up":
+//                    newRow--;
+//                    break;
+//                case "down":
+//                    newRow++;
+//                    break;
+//                case "right":
+//                    newCol++;
+//                    break;
+//                case "left":
+//                    newCol--;
+//                    break;
+//            }
+
+//            if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols)
+//            {
+//                if (matrix[newRow, newCol] == '-')
+//                {
+//                    matrix[boyRow, boyCol] = '.';
+//                    boyRow = newRow;
+//                    boyCol = newCol;
+
+//                    if (matrix[boyRow, boyCol] == 'P')
+//                    {
+//                        matrix[boyRow, boyCol] = 'R';
+//                        pizzaCollected = true;
+//                        Console.WriteLine("Pizza is collected. 10 minutes for delivery.");
+//                    }
+//                }
+//                else if (matrix[newRow, newCol] == 'A')
+//                {
+//                    matrix[boyRow, boyCol] = ' ';
+//                    matrix[newRow, newCol] = 'P';
+//                    deliverySuccessful = true;
+//                    Console.WriteLine("Pizza is delivered on time! Next order...");
+//                    break;
+//                }
+//            }
+//            else
+//            {
+//                Console.WriteLine("The delivery is late. Order is canceled.");
+//                break;
+//            }
+//        }
+
+//        PrintMatrix(matrix, rows, cols);
+//    }
+//}

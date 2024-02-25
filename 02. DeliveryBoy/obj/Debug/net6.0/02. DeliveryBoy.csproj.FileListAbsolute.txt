@@ -1,0 +1,14 @@
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/bin/Debug/net6.0/02. DeliveryBoy
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/bin/Debug/net6.0/02. DeliveryBoy.deps.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/bin/Debug/net6.0/02. DeliveryBoy.runtimeconfig.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/bin/Debug/net6.0/02. DeliveryBoy.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/bin/Debug/net6.0/02. DeliveryBoy.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.AssemblyInfoInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.AssemblyInfo.cs
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.csproj.CoreCompileInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/refint/02. DeliveryBoy.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/02. DeliveryBoy.genruntimeconfig.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/02. DeliveryBoy/obj/Debug/net6.0/ref/02. DeliveryBoy.dll
