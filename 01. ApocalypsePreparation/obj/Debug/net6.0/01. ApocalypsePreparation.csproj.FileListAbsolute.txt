@@ -1,0 +1,14 @@
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.AssemblyInfoInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.AssemblyInfo.cs
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.csproj.CoreCompileInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/bin/Debug/net6.0/01. ApocalypsePreparation
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/bin/Debug/net6.0/01. ApocalypsePreparation.deps.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/bin/Debug/net6.0/01. ApocalypsePreparation.runtimeconfig.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/bin/Debug/net6.0/01. ApocalypsePreparation.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/bin/Debug/net6.0/01. ApocalypsePreparation.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/refint/01. ApocalypsePreparation.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/01. ApocalypsePreparation.genruntimeconfig.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. ApocalypsePreparation/obj/Debug/net6.0/ref/01. ApocalypsePreparation.dll

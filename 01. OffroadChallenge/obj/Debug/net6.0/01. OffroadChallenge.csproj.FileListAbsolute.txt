@@ -1,0 +1,14 @@
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/bin/Debug/net6.0/01. OffroadChallenge
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/bin/Debug/net6.0/01. OffroadChallenge.deps.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/bin/Debug/net6.0/01. OffroadChallenge.runtimeconfig.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/bin/Debug/net6.0/01. OffroadChallenge.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/bin/Debug/net6.0/01. OffroadChallenge.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.AssemblyInfoInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.AssemblyInfo.cs
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.csproj.CoreCompileInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/refint/01. OffroadChallenge.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/01. OffroadChallenge.genruntimeconfig.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. OffroadChallenge/obj/Debug/net6.0/ref/01. OffroadChallenge.dll

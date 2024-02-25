@@ -1,0 +1,40 @@
+﻿namespace _01._OffroadChallenge;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack<int> fuel = new Stack<int>(Array.ConvertAll(Console.ReadLine().Split(), int.Parse));
+        Queue<int> consumptin = new Queue<int>(Array.ConvertAll(Console.ReadLine().Split(), int.Parse));
+        Stack<int> amountOfFuel = new Stack<int>(Array.ConvertAll(Console.ReadLine().Split(), int.Parse));
+        List<string> altitude = new List<string>();
+        int matchesCount = 0;
+       
+
+        while (fuel.Count > 0 && consumptin.Count > 0)
+        {
+            int currentFuel = fuel.Pop();
+            int currentConsumption = consumptin.Dequeue();
+            int curentAmontOfFuel = amountOfFuel.Pop();
+            int result = currentFuel - currentConsumption;
+            matchesCount++;
+            if (result >= currentConsumption)
+            {
+                string reached = "Altitude" + matchesCount;
+                altitude.Add(reached);
+                Console.WriteLine($"John has reached: {reached}");
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+}
+/*
+40 66 123 100
+10 30 70 33
+40 55 77 100
+ 
+ 
+ 
+ */

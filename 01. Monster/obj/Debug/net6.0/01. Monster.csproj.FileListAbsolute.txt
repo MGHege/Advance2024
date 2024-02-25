@@ -1,0 +1,14 @@
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/bin/Debug/net6.0/01. Monster
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/bin/Debug/net6.0/01. Monster.deps.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/bin/Debug/net6.0/01. Monster.runtimeconfig.json
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/bin/Debug/net6.0/01. Monster.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/bin/Debug/net6.0/01. Monster.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.AssemblyInfoInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.AssemblyInfo.cs
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.csproj.CoreCompileInputs.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/refint/01. Monster.dll
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.pdb
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/01. Monster.genruntimeconfig.cache
+/Users/mihaelahege/Projects/Advance2024/C Advanced Retake Exam/01. Monster/obj/Debug/net6.0/ref/01. Monster.dll
