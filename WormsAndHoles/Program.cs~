@@ -1,0 +1,46 @@
+﻿namespace WormsAndHoles;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Stack<int> worms = new Stack<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray());
+        
+        Queue<int> hols = new Queue<int>(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray());
+        int matchesCount = 0;
+        
+            while(worms.Count>0)
+            {
+                if (worms.Peek()==hols.Peek())
+                {
+                    matchesCount++;
+                    worms.Pop();
+                    hols.Dequeue();
+                   
+                }
+                else if (worms.Peek() > hols.Peek())
+                {
+                    int newValue = worms.Pop() - 3;
+                    hols.Dequeue();
+                 if (newValue>0)
+                 {
+                   worms.Push(newValue);
+                 }
+
+                }
+            }
+        
+        if (matchesCount>0)
+        {
+            Console.WriteLine($"Matches: {matchesCount}");
+        }
+        else if(matchesCount <= 0)
+        {
+            Console.WriteLine($"There are no matches.");
+        }
+        if (worms.Any())
+        {
+
+        }
+    }
+}
+

@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Xml.Linq;
+
+namespace SoftUniKindergarten
+{
+    public class Kindergarten
+    {
+        public Kindergarten(string name, int capacity)
+        {
+            Name = name;
+            Capacity = capacity;
+            Registry = new List<Child>();
+        }
+        public string Name { get; set; }
+
+        public int Capacity { get; set; }
+
+        public List<Child> Registry { get; set; }
+
+        public int ChildrenCount => this.Registry.Count;
+        // Adds a child to the Registry if there is room for it and returns True. If there is no room for another child, returns False
+        public bool AddChild(Child child)
+        {
+            if (this.ChildrenCount == this.Capacity)
+            {
+                return false;
+            }
+            this.Registry.Add(child);
+            return true;
+        }
+        //Method RemoveChild(string childFullName) - removes a Child by a given full name. The childFullName will be a composition of the first name and the last name of the Child, separated by a single space. If removal is successful, returns True, otherwise, returns False.
+        public bool RemoveChild(string childFullName) => this.Registry.Remove(this.Registry.FirstOrDefault(x => x.FirstName == childFullName.Split(" ")[0] && x.LastName == childFullName.Split(" ")[1]));
+        //Returns the Child with the given full name. . The childFullName will be a composition of the first name and the last name of the child, separated by asingle space.If no child with the given childFullName is found, return null.
+        public bool GetChild(string childFullName) => this.Registry.Remove(this.Registry.FirstOrDefault(x => x.FirstName == childFullName.Split(" ")[0] && x.LastName == childFullName.Split(" ")[1]));
+        // Orders the children by age descending, then by last name ascending, then by first name ascending, and returns a String in the following format:
+        public string RegistryReport()
+        {
+            var sortedChildren = this.Registry.OrderByDescending(x => x.Age).ThenBy(x => x.LastName).ThenBy(x => x.FirstName).ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Registered children in {this.Name}:");
+
+            foreach (var child in sortedChildren)
+            {
+                sb.AppendLine(child.ToString());
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+    }
+}
