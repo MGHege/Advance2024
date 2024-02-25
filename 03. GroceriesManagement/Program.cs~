@@ -1,0 +1,111 @@
+﻿namespace GroceriesManagement;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Product
+{
+    public string Name { get; }
+    public double Price { get; }
+
+    public Product(string name, double price)
+    {
+        Name = name;
+        Price = price;
+    }
+
+    public override string ToString()
+    {
+        return $"{Name}: {Price:F2}$";
+    }
+}
+
+class GroceriesStore
+{
+    private List<Product> stall;
+
+    public int Capacity { get; }
+    public double Turnover { get; private set; }
+
+    public GroceriesStore(int capacity)
+    {
+        Capacity = capacity;
+        Turnover = 0;
+        stall = new List<Product>();
+    }
+
+    public void AddProduct(Product product)
+    {
+        if (stall.Count < Capacity && !stall.Any(p => p.Name == product.Name))
+        {
+            stall.Add(product);
+        }
+    }
+
+    public bool RemoveProduct(string name)
+    {
+        Product product = stall.FirstOrDefault(p => p.Name == name);
+
+        if (product != null)
+        {
+            stall.Remove(product);
+            return true;
+        }
+
+        return false;
+    }
+
+    public string SellProduct(string name, double quantity)
+    {
+        Product product = stall.FirstOrDefault(p => p.Name == name);
+
+        if (product != null)
+        {
+            double totalPrice = product.Price * quantity;
+            Turnover += totalPrice;
+            return $"{product.Name} - {totalPrice:F2}$";
+        }
+
+        return "Product not found";
+    }
+
+    public string GetMostExpensive()
+    {
+        Product mostExpensiveProduct = stall.OrderByDescending(p => p.Price).FirstOrDefault();
+
+        return mostExpensiveProduct?.ToString();
+    }
+
+    public string CashReport()
+    {
+        return $"Total Turnover: {Turnover:F2}$";
+    }
+
+    public string PriceList()
+    {
+        return $"Groceries Price List:{Environment.NewLine}{string.Join(Environment.NewLine, stall)}";
+    }
+}
+
+class StartUp
+{
+    static void Main()
+    {
+        // Example usage:
+        GroceriesStore groceriesStore = new GroceriesStore(5);
+
+        groceriesStore.AddProduct(new Product("Apples", 1.20));
+        groceriesStore.AddProduct(new Product("Bananas", 0.90));
+        groceriesStore.AddProduct(new Product("Oranges", 1.50));
+
+        Console.WriteLine(groceriesStore.PriceList());
+
+        Console.WriteLine(groceriesStore.SellProduct("Apples", 2));
+        Console.WriteLine(groceriesStore.CashReport());
+
+        Console.WriteLine(groceriesStore.GetMostExpensive());
+
+        groceriesStore.RemoveProduct("Bananas");
+        Console.WriteLine(groceriesStore.PriceList());
+    }
+}

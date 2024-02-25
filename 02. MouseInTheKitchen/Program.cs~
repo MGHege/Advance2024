@@ -1,0 +1,9 @@
+﻿namespace _02._MouseInTheKitchen;
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+    }
+}
+

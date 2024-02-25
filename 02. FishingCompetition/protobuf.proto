@@ -1,0 +1,127 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "_02._FishingCompetition";
+
+namespace _02._FishingCompetition;
+class Program
+{
+    static void Main(string[] args)
+    {
+        int n = int.Parse(Console.ReadLine());
+        char[,] matrix = new char[n, n];
+        int colectFish = 0;
+
+        int gamblerRow = -1;
+        int gamblerCol = -1;
+
+        // Initialize the matrix and find the initial gambler position
+        for (int row = 0; row < n; row++)
+        {
+            string data = Console.ReadLine();
+            for (int col = 0; col < n; col++)
+            {
+                matrix[row, col] = data[col];
+                if (matrix[row, col] == 'S')
+                {
+                    gamblerRow = row;
+                    gamblerCol = col;
+                }
+            }
+        }
+        string input;
+        while ((input = Console.ReadLine()) != "collect the nets")
+        {
+            matrix[gamblerRow, gamblerCol] = '-';
+            if (input == "down")
+            {if (gamblerRow == matrix.GetLength(0) - 1)
+                {
+                    gamblerRow = 0;
+                }
+                else
+                {
+                    gamblerRow++;
+                }
+               
+            }
+            else if (input == "up")
+            {if (gamblerRow == 0)
+                {
+                    gamblerRow = n - 1;
+                    
+                }
+                else
+                {
+                    gamblerRow--;
+                }
+               
+            }
+            else if (input == "left")
+            {
+                
+                if (gamblerCol == 0)
+                {
+                    gamblerCol = n - 1;
+                   
+                }
+                else
+                {
+                    gamblerCol--;
+                }
+               
+            }
+
+            else if (input == "right")
+            {
+                
+                if (gamblerCol==matrix.GetLength(1) - 1)
+                {
+                    gamblerCol = 0;
+                   
+                }
+                else
+                {
+                    gamblerCol++;
+                }
+                
+            }
+
+
+            if (matrix[gamblerRow, gamblerCol] != '-')
+            {
+                if (matrix[gamblerRow, gamblerCol] == 'W')
+                {
+                    Console.WriteLine($"You fell into a whirlpool! The ship sank and you lost the fish you caught. Last coordinates of the ship: [{gamblerRow},{gamblerCol}]");
+                    return;
+                }
+                else
+                {
+                    colectFish += int.Parse(matrix[gamblerRow, gamblerCol].ToString());
+                }
+            }
+
+            matrix[gamblerRow, gamblerCol] = 'S';
+        }
+        if (colectFish >= 20)
+        {
+            Console.WriteLine($"Success! You managed to reach the quota!");
+            Console.WriteLine($"Amount of fish caught: {colectFish} tons.");
+        }
+        else if (colectFish < 20)
+        {
+            int needTons = 20 - colectFish;
+            Console.WriteLine($"You didn't catch enough fish and didn't reach the quota! You need {needTons} tons of fish more.");
+            Console.WriteLine($"Amount of fish caught: {colectFish} tons.");
+        }
+        
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                Console.Write(matrix[i, j]);
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+
