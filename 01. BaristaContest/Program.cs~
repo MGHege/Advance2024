@@ -1,0 +1,73 @@
+﻿internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Queue<int> coffee = new Queue<int>(Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+        Stack<int> milk = new Stack<int>(Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+        Dictionary<string, int> drinks = new Dictionary<string, int>
+        {{"Cortado",50 },
+            {"Espresso",75 },
+            {"Capuccino",100 },
+            {"Americano",150 },
+            {"Late",200 }
+        };
+        Dictionary<string, int> countDrinks = new Dictionary<string, int>();
+
+        while (coffee.Any() && milk.Any())
+        {
+            int count = coffee.Peek() + milk.Peek();
+            foreach (var kv in drinks)
+            {
+                if (kv.Value == count)
+                {
+                    if (!countDrinks.ContainsKey(kv.Key))
+                    {
+                        countDrinks.Add(kv.Key, 0);
+                    }
+                    countDrinks[kv.Key] += 1;
+
+                    milk.Pop();
+                }
+                else
+                {
+                    milk.Push(milk.Pop() - 5);
+                }
+                coffee.Dequeue();
+            }
+        }
+
+            if (coffee.Count == 0 && milk.Count == 0)
+            {
+                Console.WriteLine($"Nina is going to win! She used all the coffee and milk!");
+                Console.WriteLine($"Coffee left: none");
+                Console.WriteLine($"Milk left: none");
+            }
+            else
+            {
+                Console.WriteLine($"Nina needs to exercise more! She didn't use all the coffee and milk!");
+                if (coffee.Any())
+                {
+                    Console.WriteLine($"Coffee left: {string.Join(", ", coffee)}");
+                }
+                if (milk.Any())
+                {
+                    Console.WriteLine($"Milk left: {string.Join(", ", milk)}");
+                }
+
+            }
+            var coDrinks = countDrinks.OrderBy(x => x.Value).ThenBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+        foreach (var keyValue in coDrinks)
+        {
+            Console.WriteLine($"{keyValue.Key}: {keyValue.Value}");
+        }
+        }
+    }
+/*
+20, 35, 100, 27, 56, 30, 30
+45, 20, 144, 173, 100, 40, 30
+
+ 
+ 
+ 
+ 
+ **/
